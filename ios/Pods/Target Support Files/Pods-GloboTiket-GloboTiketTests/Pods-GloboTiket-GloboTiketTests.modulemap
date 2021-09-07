@@ -1,0 +1,6 @@
+module Pods_GloboTiket_GloboTiketTests {
+  umbrella header "Pods-GloboTiket-GloboTiketTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

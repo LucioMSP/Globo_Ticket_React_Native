@@ -1,0 +1,6 @@
+module Pods_GloboTiket {
+  umbrella header "Pods-GloboTiket-umbrella.h"
+
+  export *
+  module * { export * }
+}
