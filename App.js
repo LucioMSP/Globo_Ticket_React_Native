@@ -7,6 +7,7 @@ import Home from './Home';
 import Tickets from './Tickets';
 import Contact from './Contact';
 import TicketPurchase from './TicketPurchased';
+import News from './News';
 
 const Stack = createStackNavigator();
 
@@ -35,6 +36,7 @@ const App: () => React$Node = () => {
               headerTitleStyle: {fontFamily: 'Ubuntu-Regular'}
             }}
           />
+          
           <Stack.Screen 
             name='Contact'
             component={Contact}
@@ -44,6 +46,7 @@ const App: () => React$Node = () => {
               headerTitle: 'Contact Us'
             }}
           />
+
           <Stack.Screen 
             name='Purchase'
             component={TicketPurchase}
@@ -51,6 +54,16 @@ const App: () => React$Node = () => {
               headerTitleAlign: 'center',
               headerTitleStyle: {fontFamily: 'Ubuntu-Regular'},
               headerTitle: 'Purchase Tickets'
+            }}
+          />
+
+          <Stack.Screen 
+            name='News'
+            component={News}
+            options={{
+              headerTitleAlign: 'center',
+              headerTitleStyle: {fontFamily: 'Ubuntu-Regular'},
+              headerTitle: 'Latest News'
             }}
           />
 

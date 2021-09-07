@@ -32,6 +32,36 @@ const News = () => {
                 <Text style={styles.storytext}>{item.title}</Text>
                 <Text style={styles.storytext}>{item.url}</Text>
             </View>
-        )
-    }
+        );
+    };
+
+    return(
+        <View style={styles.container}>
+            {isLoaded ? <ActivityIndicator /> : (
+                <FlatList
+                    data={storyData}
+                    renderItem={newsItem}
+                    keyExtractor={(item) => item.title}
+                /> 
+            )}
+        </View>
+    );
 }
+
+const styles = StyleSheet.create ({
+    container: {
+        paddingTop: 20
+    },
+    storylist: {
+        paddingBottom: 20
+    },
+    thumb: {
+        height: 100,
+        width: '100%'
+    },
+    storytext: {
+        padding: 10
+    }
+});
+
+export default News;
