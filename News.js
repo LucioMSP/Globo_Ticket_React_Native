@@ -21,4 +21,17 @@ const News = () => {
     },[]);
 
     console.log(storyData);
+
+    const newsItem = ({item}) => {
+        return (
+            <View style={StyleSheet.storylist}>
+                <Image
+                    style={styles.thumb}
+                    source={{ uri: item.url}}
+                />
+                <Text style={styles.storytext}>{item.title}</Text>
+                <Text style={styles.storytext}>{item.url}</Text>
+            </View>
+        )
+    }
 }
