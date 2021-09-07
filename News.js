@@ -15,4 +15,10 @@ const News = () => {
             console.error(error);
         }
     };
+
+    useEffect (() => {
+        getNews();
+    },[]);
+
+    console.log(storyData);
 }
